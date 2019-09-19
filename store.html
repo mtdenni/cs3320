@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Store</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <a href="index.html">Home</a> |
+            <a href="store.html">Store</a> |
+            <a href="login.html">Login</a> |
+            <a href="register.html">Register</a> |
+            <a href="cart.html">Cart</a> |
+            <a href="account.html">User Information</a> |
+            <a href="shipping.html">Shipping Information</a> |
+            <hr />
+        </nav>
+        <header>
+            <h1>Store</h1>
+            <hr />
+        </header>
+    </div>
+    <div class="container">
+        <form action="checkout.html">
+            <div class="container" style="display:table">
+                <div style="width:60%; display:table-cell">
+                    <label><b>Items For purchase</b></label>
+                    <!-- NEED TO ADD MULTISELECT ONCE WE HAVE JS/CSS -->
+                    <select name="product">
+                        <option value="SDCard">Sonny Disk 3 TB MicroSd Card($1,000,000/ea)</option>
+                        <option value="Game">A Game For People($60/ea)</option>
+                        <option value="console">Mentincho Twicth Gameing Console($350/ea)</option>
+                        <option value="hoodie">Bluetuber Merch Hoodie($40/ea)</option>
+                        <option value="coffee">Coffee Beans Brand Coffee($8.99/lb)</option>
+                    </select><br />
+
+                    <label><b>How many you want?</b></label>
+                    <input type="text" name="quantity" placeholder="1" maxlength="2" size="2" />
+                    <label><b>Unit Price: </b></label>
+                    <label><b>N/A</b></label>
+
+                    <button name="Add">Add to Cart</button>
+
+                </div>
+                <div style="width:40%;display:table-cell; padding-left:.5%">
+                    <table style="width:100%;border-style:solid;border-width:2px">
+                        <tr style="">
+                            <th>Item</th>
+                            <th>Price per Unit</th>
+                            <th>Quantity</th>
+                        </tr>
+                        <tr>
+                            <td>To be determined</td>
+                            <td>To be determined</td>
+                            <td>To be determined</td>
+                        </tr>
+                        <tr style="border-top:solid;border-width:2px">
+                            <td></td>
+                            <td>Total:</td>
+                            <td></td>
+                        </tr>
+                    </table>
+
+                    <button type="submit" style="float:right">Proceed to Checkout</button>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <hr />
+        <span id="copy">&copy; Things and Stuff</span>
+    </footer>
+</body>
+
+</html>
