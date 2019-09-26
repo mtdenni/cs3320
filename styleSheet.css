@@ -1,14 +1,13 @@
 body{
-	margin:0;
+    margin:0;
 }
 div{
-	overflow:auto;
 }
 .main {
-	display:block;
+    padding-top:4em;
 }
 .topnav {
-	
+	top:0;
 	position: fixed;
 	overflow:hidden;
 	background-color:dodgerblue;
@@ -35,30 +34,36 @@ div{
 		}
 	
 
-.topnav-centered a {
+.topnav-centered{
 	float: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-55%, -50%);
 }
 
 
 
 .topnav-right {
 	float: right;
+    object-fit:cover;
 }
 
 #sidebar {
-	display:none;
-	background-color: dodgerblue;
-	position:absolute;
-	height:100%;
+    display: none;
+    background-color: dodgerblue;
+    position: fixed;
+    height: 100%;
+    box-shadow: 0px 10px 9px grey;
 }
-	#sidebar a {
-		color: white;
-	}
+    #sidebar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 12px;
+    }
 
+#content{
+}
 /*
 .navbar {
 	top: 0;
@@ -130,16 +135,27 @@ div{
 	transform: rotate(45deg) translate(-8px, -8px);
 }
 @media screen and (max-width:600px) {
+    /*
 	.topnav a, .topnav-right {
 		float: none;
 		display: block;
 	}
-
+        */
 	.topnav-centered a {
 		position: relative;
 		top: 0;
 		left: 0;
 		transform: none;
 	}
+    .topnav-right{
+        /*display:none;*/
+    }
+    .topnav-centered {
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-85%, -50%);
+    }
 	
 }
