@@ -1,11 +1,72 @@
+
 body{
     margin:0;
 }
-div{
+
+footer{
+	background-color: dodgerblue; /* #1E90FF */
+	text-align: center;
+	padding-top: 20px;
+
 }
+
+a{
+    
+}
+
+a:hover{
+	color: black;
+}
+
+hr{
+    border: dotted dodgerblue 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 50px auto 50px auto;
+}
+
+.footer-link{
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.copyright{
+	color: white;
+}
+
 .main {
-    padding-top:4em;
+	padding-top:4em;
+	background-color: #D0E7FF;
+	text-align: left;
+
 }
+
+#intro{
+	padding-top: 20px;
+}
+
+.things-stuff{
+	padding-top: 50px;
+}
+
+.store-pic{
+	width: 20%;
+	float: none;
+}
+
+#content{
+	text-align: center;
+	padding: 20px;
+}
+
+.invite-to-store{
+	font-size: 3em;
+	text-align: center;
+	padding-bottom: 25px;
+
+}
+
 .topnav {
 	top:0;
 	position: fixed;
@@ -51,7 +112,7 @@ div{
 
 #sidebar {
     display: none;
-    background-color: dodgerblue;
+    background-color: #4BA6FF;
     position: fixed;
     height: 100%;
     box-shadow: 0px 10px 9px grey;
@@ -62,8 +123,7 @@ div{
         padding: 10px 12px;
     }
 
-#content{
-}
+
 /*
 .navbar {
 	top: 0;
@@ -147,9 +207,9 @@ div{
 		left: 0;
 		transform: none;
 	}
-    .topnav-right{
-        /*display:none;*/
-    }
+    /*.topnav-right{
+        display:none;
+    }*/
     .topnav-centered {
         float: none;
         position: absolute;
