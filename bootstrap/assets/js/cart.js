@@ -31,7 +31,16 @@ function updateTotal() {
   for (var i = 0; i < items.length; i++) {
     total = total + Number(items[i].itemPrice) * Number(items[i].itemQuantity);
   }
+  var totalTax = total * 0.08;
+  var totalShipping = total * 0.03;
+
+  total = total + totalTax + totalShipping;
+
+  var taxString = formatNumberAsUSD(totalTax);
+  var shippingString = formatNumberAsUSD(totalShipping);
   var totalString = formatNumberAsUSD(total);
 
+  document.getElementById('tax-amt').innerHTML = taxString;
+  document.getElementById('shipping-amt').innerHTML = shippingString;
   document.getElementById('totalField').innerHTML = totalString;
 }
