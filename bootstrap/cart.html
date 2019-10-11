@@ -24,6 +24,7 @@
     />
     <!-- CUSTOM CSS -->
     <link href="./assets/css/styles.css" rel="stylesheet" />
+    <link href="./assets/css/cart.css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -93,7 +94,7 @@
         <div class="row justify-content-center">
           <div class="col ml-1 border">
             <div class="table-responsive text-nowrap">
-              <table class="table">
+              <table id="items-table" class="table">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -103,21 +104,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>TBD</td>
-                    <td>TBD</td>
-                    <td>TBD</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>TBD</td>
-                    <td>TBD</td>
-                    <td>TBD</td>
-                  </tr>
                 </tbody>
               </table>
-              <p><b>Total:</b> <span class="totalField">TBD</span></p>
+              <p class='totals'>Shipping: <span id="shipping-amt"></span></p>
+              <p class='totals'>Tax: <span id="tax-amt"></span></p>
+              <p class='totals'><b>Total:</b> <span id="totalField"></span></p>
+              
             </div>
           </div>
         </div>
@@ -135,6 +127,10 @@
       </div>
     </footer>
     <!-- SCRIPTS -->
+    <script
+      type="text/javascript"
+      src="./assets/js/cart.js"
+    ></script>
     <!-- JQuery -->
     <script
       type="text/javascript"
