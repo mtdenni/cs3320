@@ -1,17 +1,17 @@
 // ITEMS ADDED TO CART
-//var oldItems = JSON.parse(localStorage.getItem('items'));
+var oldItems = JSON.parse(localStorage.getItem('items'));
 var items = [];
-/*
+
 init();
 
 function init() {
-    for (var i = 0; i < oldItems.length; i++) {
-        addItemToRow(oldItems[i], i);
-        items[i] = oldItems[i];
+    items = oldItems;
+    for (var i = 0; i < items.length; i++) {
+        addItemToRow(items[i], i);
     }
     updateTotal();
 }
-*/
+
 // ADD TO CART
 document.getElementById('add-to-cart').onclick = function() {
   var item = createNewItemObject();
@@ -60,8 +60,8 @@ function addItemToRow(item) {
   row.insertCell(0).innerText = items.length;
   row.insertCell(1).innerText = item.itemName;
   row.insertCell(2).innerText = unitPrice;
-    row.insertCell(3).innerText = item.itemQuantity;
-    row.insertCell(4).innerHTML = HTMLButtonElement
+  row.insertCell(3).innerText = item.itemQuantity;
+  row.insertCell(4).innerHTML = HTMLButtonElement;
 }
 
 // UPDATE TOTAL FIELD
