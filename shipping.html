@@ -39,6 +39,7 @@
 
         <div class="main">
             <div id="sidebar">
+                <ul><a href="index.html">Home</a></ul>            
                 <ul><a href="store.html">Store</a></ul>
                 <ul><a href="login.html">Login</a></ul>
                 <ul><a href="register.html">Register</a></ul>
@@ -49,6 +50,8 @@
                     <h1>Shipping Information</h1>
                     <hr />
                 </header>
+                <p class="intro-account">Please enter your shipping information.</p>
+
                 <form action="#">
                     <div class="container">
                         <label class="container">
@@ -65,7 +68,7 @@
                         <label for="city"><b>City: </b></label>
                         <input type="text" name="city" placeholder="Birmingham" maxlength="100" required><br />
                         <label for="state"><b>State: </b></label>
-                        <select name="state">
+                        <select class="custom-select" name="state">
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>
@@ -124,14 +127,15 @@
                         <input type="text" name="phone" placeholder="555-555-5555" maxlength="12" required><br />
                         <label for="email"><b>Email: </b></label>
                         <input type="text" name="email" placeholder="email@email.com" maxlength="100" required><br />
-                        <input type="submit" value="Submit">
+                        <input class="btn" type="submit" value="Submit">
                     </div>
                 </form>
             </div>
         </div>
-        <footer>
-            <hr />
-            <span id="copy">&copy; Things and Stuff</span>
+        <footer>      
+                <a class="footer-link" href="register.html">Register</a>
+                <a class="footer-link" href="login.html">LogIn</a>
+                <p class="copyright">© Things and Stuff 2019 by Dennison, Corbett, Morris.</p>
         </footer>
     </body>
 

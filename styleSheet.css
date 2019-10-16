@@ -1,11 +1,155 @@
+header{
+	text-align: center;
+}
+
 body{
     margin:0;
 }
-div{
+
+footer{
+	background-color: dodgerblue; /* #1E90FF */
+	text-align: center;
+	padding-top: 20px;
+
 }
+
+a{
+    
+}
+
+a:hover{
+	color: black;
+}
+
+input[type=text] {
+	width: 30%;
+	padding: 12px 20px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+  }
+  
+  input[type=text]:focus {
+	border: 3px solid dodgerblue;
+  }
+
+hr{
+    border: dotted dodgerblue 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 50px auto 50px auto;
+}
+
+/********************************************/
+
+#content{
+	padding: 20px;
+}
+
+/********************************************/
+.test3{
+	
+}
+.cart-table {
+	border-collapse: collapse;
+	border-style:solid;
+	border-width:2px;
+	width: 70%;
+	margin: auto;
+}
+  
+th, td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+  
+tr:hover {
+	  background-color:#f5f5f5;
+}
+
+
+
+.container{
+	text-align: center;
+}
+
+.copyright{
+	color: white;
+}
+
+.custom-select{
+	color: #787878;
+	width: 30%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+}
+
+.custom-select:hover{
+	border: 3px solid dodgerblue;	
+}
+
+.footer-link{
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+	margin: 10px 20px;
+}
+
+.intro{
+	padding-top: 20px;
+	text-align: center;
+}
+.intro-account{
+	padding-top: 20px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
 .main {
-    padding-top:4em;
+	padding-top:4em;
+	background-color: #D0E7FF;
+	text-align: left;
+
 }
+
+.things-stuff{
+	padding-top: 50px;
+	display: block;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.store-pic{
+	width: 20%;
+	float: none;
+}
+
+
+
+.invite-to-store{
+	font-size: 3em;
+	text-align: center;
+	padding-bottom: 25px;
+
+}
+
+.store-link{
+	margin-top: 100px;
+	font-size: 1em;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
 .topnav {
 	top:0;
 	position: fixed;
@@ -51,7 +195,7 @@ div{
 
 #sidebar {
     display: none;
-    background-color: dodgerblue;
+    background-color: #4BA6FF;
     position: fixed;
     height: 100%;
     box-shadow: 0px 10px 9px grey;
@@ -62,8 +206,7 @@ div{
         padding: 10px 12px;
     }
 
-#content{
-}
+
 /*
 .navbar {
 	top: 0;
@@ -147,9 +290,9 @@ div{
 		left: 0;
 		transform: none;
 	}
-    .topnav-right{
-        /*display:none;*/
-    }
+    /*.topnav-right{
+        display:none;
+    }*/
     .topnav-centered {
         float: none;
         position: absolute;
@@ -159,3 +302,31 @@ div{
     }
 	
 }
+
+.btn {
+	margin: 50px;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2c7bb8);
+	background-image: -moz-linear-gradient(top, #3498db, #2c7bb8);
+	background-image: -ms-linear-gradient(top, #3498db, #2c7bb8);
+	background-image: -o-linear-gradient(top, #3498db, #2c7bb8);
+	background-image: linear-gradient(to bottom, #3498db, #2c7bb8);
+	-webkit-border-radius: 5;
+	-moz-border-radius: 5;
+	border-radius: 5px;
+	font-family: Arial;
+	color: #fafafa;
+	font-size: 20px;
+	padding: 10px 30px 10px 30px;
+	text-decoration: none;
+  }
+  
+  .btn:hover {
+	background: #277db3;
+	background-image: -webkit-linear-gradient(top, #277db3, #298bcc);
+	background-image: -moz-linear-gradient(top, #277db3, #298bcc);
+	background-image: -ms-linear-gradient(top, #277db3, #298bcc);
+	background-image: -o-linear-gradient(top, #277db3, #298bcc);
+	background-image: linear-gradient(to bottom, #277db3, #298bcc);
+	text-decoration: none;
+  }

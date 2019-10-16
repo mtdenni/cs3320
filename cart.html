@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styleSheet.css">
     <script type="text/javascript" src="scripts.js"></script>
 
-    <title>Store</title>
+    <title>Cart</title>
 </head>
 
 <body>
@@ -39,6 +39,7 @@
 
     <div class="main">
         <div id="sidebar">
+            <ul><a href="index.html">Home</a></ul>
             <ul><a href="store.html">Store</a></ul>
             <ul><a href="login.html">Login</a></ul>
             <ul><a href="register.html">Register</a></ul>
@@ -52,8 +53,8 @@
             <form action="checkout.html">
                 <div class="container" style="display:table">
                     <div style="width:40%;display:table-cell; padding-left:.5%">
-                        <table style="border-style:solid;border-width:2px">
-                            <tr style="">
+                        <table class="cart-table">
+                            <tr>
                                 <th>Item</th>
                                 <th>Price per Unit</th>
                                 <th>Quantity</th>
@@ -65,18 +66,19 @@
                             </tr>
                             <tr style="border-top:solid;border-width:2px">
                                 <td></td>
-                                <td>Total:</td>
                                 <td></td>
+                                <td>Total:</td>
                             </tr>
                         </table>
-                        <button type="submit" style="float:right">Proceed to Checkout</button>
+                        <button class="btn" type="submit" style="float:right">Proceed to Checkout</button>
                     </div>
 
                 </div>
             </form>
-            <footer>
-                <hr />
-                <span id="copy">&copy; Things and Stuff</span>
+            <footer>      
+                    <a class="footer-link" href="register.html">Register</a>
+                    <a class="footer-link" href="login.html">LogIn</a>
+                    <p class="copyright">© Things and Stuff 2019 by Dennison, Corbett, Morris.</p>
             </footer>
         </div>
     </div>

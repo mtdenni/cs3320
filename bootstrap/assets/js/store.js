@@ -1,4 +1,5 @@
 // ITEMS ADDED TO CART
+
 var oldItems = JSON.parse(localStorage.getItem('items'));
 var items = [];
 
@@ -48,7 +49,6 @@ function createNewItemObject() {
     itemName,
     itemPrice,
     itemQuantity
-    
   };
   return item;
 }
@@ -61,7 +61,9 @@ function addItemToRow(item) {
   row.insertCell(1).innerText = item.itemName;
   row.insertCell(2).innerText = unitPrice;
   row.insertCell(3).innerText = item.itemQuantity;
-  row.insertCell(4).innerHTML = HTMLButtonElement;
+
+  //row.insertCell(4).innerHTML = HTMLButtonElement;
+
 }
 
 // UPDATE TOTAL FIELD
