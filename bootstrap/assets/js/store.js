@@ -1,5 +1,17 @@
 // ITEMS ADDED TO CART
+
+var oldItems = JSON.parse(localStorage.getItem('items'));
 var items = [];
+
+init();
+
+function init() {
+    items = oldItems;
+    for (var i = 0; i < items.length; i++) {
+        addItemToRow(items[i], i);
+    }
+    updateTotal();
+}
 
 // ADD TO CART
 document.getElementById('add-to-cart').onclick = function() {
@@ -49,6 +61,9 @@ function addItemToRow(item) {
   row.insertCell(1).innerText = item.itemName;
   row.insertCell(2).innerText = unitPrice;
   row.insertCell(3).innerText = item.itemQuantity;
+
+  //row.insertCell(4).innerHTML = HTMLButtonElement;
+
 }
 
 // UPDATE TOTAL FIELD

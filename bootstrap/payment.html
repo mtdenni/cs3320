@@ -26,176 +26,166 @@
     <link href="./assets/css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <nav class="mb-3 navbar navbar-expand-lg navbar-dark default-color">
-        <a class="navbar-brand" href="index.html">That One Store</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent-333"
-          aria-controls="navbarSupportedContent-333"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="store.html">Store</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav ml-auto nav-flex-icons">
-            <li class="nav-item">
-              <a class="nav-link waves-effect waves-light" href="cart.html">
-                <i class="fas fa-shopping-cart"></i>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                id="navbarDropdownMenuLink-333"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="fas fa-user"></i>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-right dropdown-default"
-                aria-labelledby="navbarDropdownMenuLink-333"
-              >
-                <a class="dropdown-item" href="login.html">Login</a>
-                <a class="dropdown-item" href="register.html">Register</a>
-                <a class="dropdown-item" href="account.html">Account</a>
-                <a class="dropdown-item" href="shipping.html"
-                  >Shipping Information</a
-                >
-                <a class="dropdown-item" href="index.html">Logout</a>
+      <header>
+          <nav class="mb-3 navbar navbar-expand-lg navbar-dark default-color">
+              <a class="navbar-brand" href="index.html">That One Store</a>
+              <button class="navbar-toggler"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#navbarSupportedContent-333"
+                      aria-controls="navbarSupportedContent-333"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html">Home </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="store.html">Store</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="about.html">About</a>
+                      </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto nav-flex-icons">
+                      <li class="nav-item">
+                          <a class="nav-link waves-effect waves-light" href="cart.html">
+                              <i class="fas fa-shopping-cart"></i>
+                          </a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle"
+                             id="navbarDropdownMenuLink-333"
+                             data-toggle="dropdown"
+                             aria-haspopup="true"
+                             aria-expanded="false">
+                              <i class="fas fa-user"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                               aria-labelledby="navbarDropdownMenuLink-333">
+                              <a class="dropdown-item" href="login.html">Login</a>
+                              <a class="dropdown-item" href="register.html">Register</a>
+                              <a class="dropdown-item" href="account.html">Account</a>
+                              <a class="dropdown-item" href="shipping.html">Shipping Information</a>
+                              <a class="dropdown-item" href="index.html">Logout</a>
+                          </div>
+                      </li>
+                  </ul>
               </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!--/.NAVBAR -->
-    </header>
-    <!-- MAIN -->
-    <main>
-      <div class="container">
-        <!--MAIN CONTENT HERE-->
-        <div class="row justify-content-center">
-          <div class="col-md-4 border p-2">
-            <h4>Payment:</h4>
-            <form action="thankyou.html">
-              <select
-                class="browser-default custom-select mb-4"
-                id="paymentFormType"
-              >
-                <option value="null" selected disabled>Select Card Type</option>
-                <option value="VISA">VISA</option>
-                <option value="MasterCard">MasterCard</option>
-                <option value="Discovery">Discovery</option>
-                <option value="AmericanExpress">American Express</option>
-              </select>
-              <div class="row">
-                <div class="col">
-                  <input
-                    type="text"
-                    id="paymentFormNumber"
-                    class="form-control mb-4"
-                    placeholder="Enter Card Number"
-                    minlength="16"
-                    maxlength="16"
-                    size="16"
-                    inputmode="numeric"
-                    required
-                  />
-                </div>
-                <div class="col">
-                  <input
-                    type="text"
-                    id="paymentFormExpiration"
-                    class="form-control mb-4"
-                    placeholder="Expiration Date"
-                    maxlength="6"
-                    size="7"
-                    inputmode="numeric"
-                    required
-                  />
-                </div>
-                <button class="btn btn-info mx-4 btn-block" type="submit">
-                  Make Payment
-                </button>
-              </div>
-            </form>
-          </div>
+          </nav>
+          <!--/.NAVBAR -->
+      </header>
+      <!-- MAIN -->
+      <main>
+          <div class="container">
+              <!--MAIN CONTENT HERE-->
+              <div class="row justify-content-center">
+                  <div class="col-md-4 border p-2">
+                      <h4>Payment:</h4>
+                      <form action="thankyou.html">
+                          <select class="browser-default custom-select mb-4"
+                                  id="paymentFormType">
+                              <option value="null" selected disabled>Select Card Type</option>
+                              <option value="VISA">VISA</option>
+                              <option value="Mastercard">MasterCard</option>
+                              <option value="Discovery">Discovery</option>
+                              <option value="AmericanExpress">American Express</option>
+                          </select>
+                          <div class="row m-auto">
+                              <input type="text"
+                                     id="paymentFormNumber"
+                                     class="form-control mb-4"
+                                     placeholder="Enter Card Number"
+                                     minlength="16"
+                                     maxlength="16"
+                                     size="16"
+                                     inputmode="numeric"
+                                     required />
+                              <label id="paymentFormNumberLabel"></label>
+                          </div>
+                          <div class="row m-auto ">
+                              <input type="text"
+                                     id="paymentMonth"
+                                     class="form-control mb-4 col-md-3"
+                                     placeholder="MM"
+                                     maxlength="2"
+                                     size="2"
+                                     inputmode="numeric"
+                                     required />
+                              <label id="paymentMonthLabel" value=""></label>
+                              <h2 class="col-md-2">/</h2>
+                              <input type="text"
+                                     id="paymentYear"
+                                     class="form-control mb-4 col-md-4"
+                                     placeholder="YYYY"
+                                     maxlength="4"
+                                     size="4"
+                                     inputmode="numeric"
+                                     required />
+                              <label id="paymentYearLabel" value=""></label>
 
-          <div class="col-md-7 ml-1 border">
-            <div class="table-responsive text-nowrap">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Item</th>
-                    <th scope="col">Price Per Unit</th>
-                    <th scope="col">Quantity</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>TBD</td>
-                    <td>TBD</td>
-                    <td>TBD</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>TBD</td>
-                    <td>TBD</td>
-                    <td>TBD</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p><b>Total:</b> <span class="totalField">TBD</span></p>
-            </div>
+                              <div class="row m-auto">
+                                  <input type="checkbox" id="authCheck" class="col-md-1" required />
+                                  <label for="authCheck" class=" col">“I agree and authorize the amount to be charged to my credit card.”</label>
+                              </div>
+                              <button class="btn btn-info mx-4 btn-block" type="submit" id="submit">
+                                  Make Payment
+                              </button>
+                              <label id="cardMatch"></label>
+                          </div>
+                      </form>
+                  </div>
+
+                  <div class="col-md-7 ml-1 border">
+                      <div class="table-responsive text-nowrap">
+                          <table class="table" id="items-table">
+                              <thead>
+                                  <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">Item</th>
+                                      <th scope="col">Price Per Unit</th>
+                                      <th scope="col">Quantity</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                              </tbody>
+                          </table>
+                          <p class='totals'>Shipping: <span id="shipping-amt"></span></p>
+                          <p class='totals'>Tax: <span id="tax-amt"></span></p>
+                          <p class='totals'><b>Total: </b><span id="totalField"></span></p>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-    </main>
-    <footer class="page-footer font-small blue mt-4 pt-4">
-      <div class="footer-copyright text-center py-3">
-        © 2019 Copyright:
-        <a href="index.html"> That One Store</a> by Dennison, Corbett, Morris.
-      </div>
-    </footer>
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-    ></script>
-    <!-- Bootstrap tooltips -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
-    ></script>
-    <!-- Bootstrap core JavaScript -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
-    ></script>
-    <!-- MDB core JavaScript -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"
-    ></script>
-    <!--/.SCRIPTS -->
+      </main>
+      <footer class="page-footer font-small blue mt-4 pt-4">
+          <div class="footer-copyright text-center py-3">
+              © 2019 Copyright:
+              <a href="index.html"> That One Store</a> by Dennison, Corbett, Morris.
+          </div>
+      </footer>
+      <!-- SCRIPTS -->
+      <!-- JQuery -->
+      <script type="text/javascript"
+              src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- Bootstrap tooltips -->
+      <script type="text/javascript"
+              src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script type="text/javascript"
+              src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <!-- MDB core JavaScript -->
+      <script type="text/javascript"
+              src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+      <!--Custom Script-->
+      <script type="text/javascript"
+              src="./assets/js/payment.js"></script>
+      <script type="text/javascript"
+              src="./assets/js/cart.js"></script>
+      <!--/.SCRIPTS -->
   </body>
 </html>
+
