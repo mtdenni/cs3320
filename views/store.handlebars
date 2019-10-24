@@ -1,0 +1,69 @@
+<main>
+    <div class="container">
+    <!--MAIN CONTENT HERE-->
+    <div class="row justify-content-center">
+        <div class="col-md-4 border p-2">
+        <h4>Select Items for Purchase:</h4>
+        <form>
+            <select
+            class="browser-default custom-select mb-4"
+            id="storeFormItems"
+            >
+            <option value="null" selected disabled>Select Item</option>
+            <option value="Sonny Disk 3 TB MicroSd Card" data-amount='1000000'
+                >Sonny Disk 3 TB MicroSd Card($1,000,000/ea)</option
+            >
+            <option value="Game" data-amount='60'>A Game For People($60/ea)</option>
+            <option value="Mentincho Twicth Gameing Console" data-amount='350'
+                >Mentincho Twicth Gameing Console($350/ea)</option
+            >
+            <option value="Bluetuber Merch Hoodie" data-amount='40'>Bluetuber Merch Hoodie($40/ea)</option>
+            <option value="Coffee Beans Brand Coffeeee" data-amount='8.99'
+                >Coffee Beans Brand Coffee($8.99/lb)</option
+            >
+            </select>
+            <div class="row">
+            <div class="col">
+                <input
+                type="text"
+                id="storeFormQuantity"
+                class="form-control mb-4"
+                placeholder="Enter Quantity"
+                required
+                />
+            </div>
+            <div class="col">
+                Unit Price: <span id="unitPriceField">N/A</span>
+            </div>
+
+            <button id="add-to-cart" class="btn btn-info mx-4 btn-block" type="button">
+                Add to Cart
+            </button>
+            <button id="checkout-button" class="btn btn-info mx-4 btn-block" type="button">
+                Checkout
+            </button>
+            </div>
+        </form>
+        </div>
+
+
+        <div class="col-md-7 ml-1 border">
+        <div class="table-responsive text-nowrap">
+            <table id="items-table" class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Price Per Unit</th>
+                <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            </table>
+            <p><b>Total:</b> <span id="totalField"></span></p>
+        </div>
+        </div>
+    </div>
+    </div>
+</main>

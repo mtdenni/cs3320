@@ -1,0 +1,32 @@
+<main>
+    <div class="container">
+    <!--MAIN CONTENT HERE-->
+    <div class="row justify-content-center">
+        <div class="col ml-1 border">
+        <div class="table-responsive text-nowrap">
+            <table id="items-table" class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Price Per Unit</th>
+                <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            </table>
+            <p class='totals'>Shipping: <span id="shipping-amt"></span></p>
+            <p class='totals'>Tax: <span id="tax-amt"></span></p>
+            <p class='totals'><b>Total:</b> <span id="totalField"></span></p>
+            
+        </div>
+        </div>
+    </div>
+    <form action="payment.html">
+        <button class="btn m-0 btn-info mt-2 btn-block" type="submit">
+        Go to Payment
+        </button>
+    </form>
+    </div>
+</main>
