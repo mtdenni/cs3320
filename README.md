@@ -50,8 +50,8 @@ foo@bar:~$ cd ~Desktop/cs3320
 ```
 3. Install dependencies with npm install in terminal
 Example:
-```shell
-$ npm i
+```console
+foo@bar:~$ npm i
 ```
 
 ### Installation  
