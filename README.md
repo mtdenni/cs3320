@@ -68,7 +68,7 @@ foo@bar:~$ npm start
 ### Screenshots
 1. See how to install dependencies:  
 ![npm-gif][npm-gif]
-2. See our site live and running, dynamically adding items to cart and displaying the unit price?  
+2. See our site live and running, dynamically adding items to cart and displaying the unit price: 
 ![site-gif][site-gif]
 
 
