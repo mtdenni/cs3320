@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  main
+    .container
+      .row
+        .col-md-12
+          form.text-center.border.border-light.p-5(action='#!')
+            p.h4.mb-4 Account
+            .form-row.mb-4
+              .col
+                // First name
+                input#registerFormFirstName.form-control(type='text' placeholder='First name' maxlength='100' required='')
+              .col
+                // Last name
+                input#defaultRegisterFormLastName.form-control(type='text' placeholder='Last name' maxlength='100' required='')
+            // Address 1
+            input#registerFormAddress1.form-control.mb-4(type='text' placeholder='Address 1' maxlength='100' required='')
+            // Address 2
+            input#registerFormAddress2.form-control.mb-4(type='text' placeholder='Address 2' maxlength='100')
+            // Address 2
+            input#registerFormCity.form-control.mb-4(type='text' placeholder='City' maxlength='100' required='')
+            // State
+            select#registerFormState.browser-default.custom-select.mb-4
+              option(value='' disabled='' selected='') State
+              each state in states
+                option(value=`${state.state_abbr}`)=state.state_name
+            // E-mail
+            input#registerFormZip.form-control.mb-4(type='text' placeholder='Zip' minlength='5' max='9' required='')
+            // E-mail
+            input#registerFormEmail.form-control.mb-4(type='email' placeholder='E-mail' maxlength='100' required='')
+            // Phone number
+            input#registerPhonePassword.form-control.mb-4(type='text' placeholder='Phone number' aria-describedby='defaultRegisterFormPhoneHelpBlock')
+            // Password
+            input#registerFormPassword.form-control.mb-4(type='password' placeholder='Password' aria-describedby='defaultRegisterFormPasswordHelpBlock')
+            // Password
+            input#registerFormPasswordVerify.form-control.mb-4(type='password' placeholder='Verify Password' aria-describedby='defaultRegisterFormPasswordHelpBlock')
+            // Sign up button
+            button.btn.btn-info.my-4.btn-block(type='submit')
+              | Submit

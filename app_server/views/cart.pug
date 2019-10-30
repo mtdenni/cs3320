@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  main
+    .container
+      // MAIN CONTENT HERE
+      .row.justify-content-center
+        .col.ml-1.border
+          .table-responsive.text-nowrap
+            table#items-table.table
+              thead
+                tr
+                  th(scope='col') #
+                  th(scope='col') Item
+                  th(scope='col') Price Per Unit
+                  th(scope='col') Quantity
+              tbody
+            p.totals
+              | Shipping: 
+              span#shipping-amt
+            p.totals
+              | Tax: 
+              span#tax-amt
+            p.totals
+              b Total:
+              span#totalField
+      form(action='payment')
+        button.btn.m-0.btn-info.mt-2.btn-block(type='submit')
+          | Go to Payment
