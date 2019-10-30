@@ -1,6 +1,4 @@
 # CS3320
-
-# Budget App
 ## Table of Contents
 
 * [About the Project](#about-the-project)
@@ -14,7 +12,7 @@
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
-This is a budget application for keeping track of income and expenses.
+This is a project for CS3320 where we were required to build a store application.
 
 
 ### Built With
