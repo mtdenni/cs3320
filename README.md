@@ -29,7 +29,7 @@ This is a project for CS3320 where we were required to build a store application
 
 ## Getting Started
 1. See [prerequisites](#prerequisites)
-2. Start the server with npm start in terminal
+2. Start the server with npm start in terminal (see[screenshots](#screenshots))
 Example
 ```console
 foo@bar:~$ npm start
@@ -41,7 +41,7 @@ foo@bar:~$ npm start
 ```console
 foo@bar:~$ curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
 ```
-2. In shell, cd into cs3320
+2. In shell, cd into cs3320 (see[screenshots](#screenshots))
 Example:
 ```console
 foo@bar:~$ cd ~Desktop/cs3320
@@ -58,7 +58,7 @@ No Installation is required.
 
 ## Usage
 1. See [prerequisites](#prerequisites)
-2. Start the server with npm start in terminal
+2. Start the server with npm start in terminal (see[screenshots](#screenshots))
 Example
 ```console
 foo@bar:~$ npm start
@@ -66,10 +66,18 @@ foo@bar:~$ npm start
 3. Visit the live website at http://localhost:3000
 
 ### Screenshots
+1. See how to install dependencies:  
+![npm-gif][npm-gif]
+2. See our site live and running, dynamically adding items to cart and displaying the unit price?  
+![site-gif][site-gif]
 
 
 ## Team
+Ben Morris - Michael Corbett - Michael Dennison
 
 **Project Link** - [GitHub](https://github.com/miketdennison/cs3320)
 
 **Project Website** - See [usage](#usage)
+<!-- IMAGES -->
+[site-gif]: ./screenshots/dynamic_live_site_example
+[npm-gif]: ./screenshots/dynamic_npm_example.gif
