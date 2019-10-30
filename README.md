@@ -68,8 +68,10 @@ foo@bar:~$ npm start
 ### Screenshots
 1. See how to install dependencies:  
 ![npm-gif][npm-gif]
-2. See our site live and running, dynamically adding items to cart and displaying the unit price: 
+2. See our site live and running
 ![site-gif][site-gif]
+3. See how our store is dynamically adding items to cart and displaying the unit price: 
+![store-gif][store-gif]
 
 
 ## Team
@@ -80,4 +82,5 @@ Ben Morris - Michael Corbett - Michael Dennison
 **Project Website** - See [usage](#usage)
 <!-- IMAGES -->
 [site-gif]: ./screenshots/dynamic_live_site_example.gif
+[store-gif]: ./screenshots/dynamic_store_example.gif
 [npm-gif]: ./screenshots/dynamic_npm_example.gif
