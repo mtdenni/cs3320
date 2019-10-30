@@ -79,5 +79,5 @@ Ben Morris - Michael Corbett - Michael Dennison
 
 **Project Website** - See [usage](#usage)
 <!-- IMAGES -->
-[site-gif]: ./screenshots/dynamic_live_site_example
+[site-gif]: ./screenshots/dynamic_live_site_example.gif
 [npm-gif]: ./screenshots/dynamic_npm_example.gif
