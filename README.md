@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # CS3320
 
 ## Table of Contents
@@ -88,6 +87,3 @@ foo@bar:~$ npm start
 **Project Link** - [GitHub](https://github.com/miketdennison/cs3320)
 
 **Project Website** - See [usage](#usage)
-=======
-
->>>>>>> f3319334d00b71f4debac52e10a90c79eb708ca9
