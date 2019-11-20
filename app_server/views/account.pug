@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  main
+    .container
+      .row
+        .col-md-12
+          p.h4.mb-4 Account History !{print}
+          each order in orders
+              .card.border-dark.mb-3
+                .card-header
+                  .row
+                    .col-md-4
+                      strong Total: 
+                      | $#{order.total.toFixed(2)}
+                    .col-md-4
+                      strong Ship To: 
+                      | #{order.address1}
+                    .col-md-4
+                      strong Order Number: 
+                      | #{order.orderNumber}
+                each orderItem in order.orderItems 
+                  .card-body.text-dark
+                    .card-title=orderItem.description
+                    .row
+                      .col-md-4
+                        p.card-text Quanitity: #{orderItem.quantity}
+                      .col-md-4
+                        p.card-text Price: $#{orderItem.unitPrice} 

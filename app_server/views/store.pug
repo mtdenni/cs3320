@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  main
+    .container
+      // MAIN CONTENT HERE
+      .row.justify-content-center
+        .col-md-4.border.p-2
+          h4 Select Items for Purchase:
+          form(action="#" method="POST")
+            select#storeFormItems.browser-default.custom-select.mb-4(name='item')
+              option(value='null' selected='' disabled='') Select Item
+              each row in products
+                option(value=`${row.productId}` data-amount=row.unitPrice)=`${row.description} ($${row.unitPrice}/ea)`
+            .row
+              .col
+                input#storeFormQuantity.form-control.mb-4(type='text' placeholder='Enter Quantity' required='' name='quantity')
+              .col
+                | Unit Price: 
+                span#unitPriceField N/A
+              button#add-to-cart.btn.btn-info.mx-4.btn-block(type='submit')
+                | Add to Cart
+              button#checkout-button.btn.btn-info.mx-4.btn-block(type='button')
+                | Checkout
+        .col-md-7.ml-1.border
+          .table-responsive.text-nowrap
+            table#items-table.table
+              thead
+                tr
+                  th(scope='col') #
+                  th(scope='col') Item
+                  th(scope='col') Price Per Unit
+                  th(scope='col') Quantity
+                  th Delete
+              tbody
+              if (items !== undefined && items.length > 0)
+                for item, index in items
+                  tr
+                    td=index+1
+                    td=item.description
+                    td=item.price
+                    td=item.quantity
+                    td
+                      a.mx-2(href=`/deleteItem/${index}` role='button')
+                        i.fas.fa-trash
+            p
+              b=`Total: $${total}`
+              span#totalField
+  script(type="text/javascript" src="./js/store.js")

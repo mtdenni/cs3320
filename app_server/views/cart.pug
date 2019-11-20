@@ -1,0 +1,61 @@
+extends layout
+
+block content
+  main
+    .container
+      form(action='#' method='POST')
+        // MAIN CONTENT HERE
+        .row.justify-content-center
+          .col.ml-1.border.mb-3.pt-2
+            h5 Select Payment
+            select#paymentFormType.browser-default.custom-select.mb-4(name='paymentId')
+              if (paymentInformation)
+                each payment in paymentInformation
+                  option(value=payment.paymentId) #{payment.cardType} #{payment.cardNumber} Exp: #{payment.expDate}
+              if (paymentInformation.length == 0)
+                option(value='null' selected='' disabled='') No Saved Payments
+            a(href='/paymentMethod') Add Payment Method
+        .row.justify-content-center
+          .col.ml-1.border.mb-3.pt-2
+            h5 Select Shipping Address
+            select#paymentFormType.browser-default.custom-select.mb-4(name='shippingId')
+              if (shipmentInformation)
+                each address in shipmentInformation
+                  option(value=address.shippingId) #{address.address1}
+              if (shipmentInformation.length == 0)
+                option(value='null' selected='' disabled='') No Saved Address
+            a(href='/shipping') Add New Address
+        .row.justify-content-center
+          .col.ml-1.border.mb-3.pt-2
+            h5 Review Items
+            .table-responsive.text-nowrap
+              table#items-table.table
+                thead
+                  tr
+                    th(scope='col') #
+                    th(scope='col') Item
+                    th(scope='col') Price Per Unit
+                    th(scope='col') Quantity
+                tbody
+                if (items !== undefined && items.length > 0)
+                  for item, index in items
+                    tr
+                      td=index+1
+                      td=item.description
+                      td=item.price
+                      td=item.quantity
+              p.totals
+                | Shipping: $
+                span#shipping-amt=shipping
+              p.totals
+                | Tax: $
+                span#tax-amt=tax
+              p.totals
+                b Total: $
+                span#totalField=total
+          input(type='hidden' id='subtotal' name='subtotal' value=subtotal)
+          input(type='hidden' id='shipping' name='shipping' value=shipping)
+          input(type='hidden' id='tax' name='tax' value=tax)
+          input(type='hidden' id='total' name='total' value=total)
+          button.btn.m-0.btn-info.mt-2.btn-block(type='submit')
+            | Process Order

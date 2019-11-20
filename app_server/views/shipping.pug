@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  main
+    .container
+      .row
+        .col-md-12
+          form.text-center.border.border-light.p-5(action='#' method="POST")
+            p.h4.mb-4 Shipping Information
+            // Address 1
+            input#registerFormAddress1.form-control.mb-4(type='text' placeholder='Address 1' maxlength='100' required='' name='address1')
+            // Address 2
+            input#registerFormAddress2.form-control.mb-4(type='text' placeholder='Address 2' maxlength='100' name='address2')
+            // City
+            input#registerFormCity.form-control.mb-4(type='text' placeholder='City' maxlength='100' required='' name='city')
+            // State
+            select#registerFormState.browser-default.custom-select.mb-4(name='state')
+              option(value='' disabled='' selected='') State
+              each state in states
+                option(value=`${state.state_abbr}`)=state.state_name
+              
+            input#registerFormZip.form-control.mb-4(type='text' placeholder='Zip' minlength='5' max='9' required='' name='zipCode')
+            button.btn.btn-info.my-4.btn-block(type='submit')
+              | Submit

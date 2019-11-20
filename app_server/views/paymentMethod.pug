@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  main
+    .container
+      // MAIN CONTENT HERE
+      .row.justify-content-center
+        .col.border.p-2
+          h4 Payment:
+          form(action='#' method="POST")
+            select#paymentFormType.browser-default.custom-select.mb-4(name='cardType')
+              option(value='null' selected='' disabled='') Select Card Type
+              option(value='VISA') VISA
+              option(value='MasterCard') MasterCard
+              option(value='Discovery') Discovery
+              option(value='AmericanExpress') American Express
+            .row
+              .col
+                input#paymentFormNumber.form-control.mb-4(type='text' placeholder='Enter Card Number' minlength='16' maxlength='16' size='16' inputmode='numeric' required='' name='cardNumber')
+              .col
+                input#paymentFormExpiration.form-control.mb-4(type='text' placeholder='Expiration Date' maxlength='6' size='7' inputmode='numeric' required='' name='expDate')
+              button.btn.btn-info.mx-4.btn-block(type='submit')
+                | Add Payment
