@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      nav.mb-3.navbar.navbar-expand-lg.navbar-dark.default-color
+        a.navbar-brand(href='/') That One Store
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent-333' aria-controls='navbarSupportedContent-333' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent-333.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/') Home 
+            li.nav-item
+              a.nav-link(href='/store') Store
+            li.nav-item
+              a.nav-link(href='/about') About
+          ul.navbar-nav.ml-auto.nav-flex-icons
+            li.nav-item
+              a.nav-link.waves-effect.waves-light(href='/cart')
+                i.fas.fa-shopping-cart
+            li.nav-item.dropdown
+              a#navbarDropdownMenuLink-333.nav-link.dropdown-toggle(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                i.fas.fa-user
+              .dropdown-menu.dropdown-menu-right.dropdown-default(aria-labelledby='navbarDropdownMenuLink-333')
+                a.dropdown-item(href='/login') Login
+                a.dropdown-item(href='/register') Register
+                a.dropdown-item(href='/account') Account
+                a.dropdown-item(href='/shipping') Shipping Information
+                a.dropdown-item(href='/') Logout
+    block content
+    footer.page-footer.font-small.blue.mt-4.pt-4
+      .footer-copyright.text-center.py-3
+        | &copy; 2019 Copyright:
+        a(href='/')  That One Store
+        |  by Dennison, Corbett, Morris.
+
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js")
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js")
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js")

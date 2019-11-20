@@ -43,14 +43,14 @@ function createNewItemObject() {
 }
 
 // ADD ITEM TO TABLE ROW
-function addItemToRow(item) {
-  var unitPrice = formatNumberAsUSD(item.itemPrice);
-  var row = document.getElementById('items-table').insertRow(items.length);
-  row.insertCell(0).innerText = items.length;
-  row.insertCell(1).innerText = item.itemName;
-  row.insertCell(2).innerText = unitPrice;
-  row.insertCell(3).innerText = item.itemQuantity;
-}
+// function addItemToRow(item) {
+//   var unitPrice = formatNumberAsUSD(item.itemPrice);
+//   var row = document.getElementById('items-table').insertRow(items.length);
+//   row.insertCell(0).innerText = items.length;
+//   row.insertCell(1).innerText = item.itemName;
+//   row.insertCell(2).innerText = unitPrice;
+//   row.insertCell(3).innerText = item.itemQuantity;
+// }
 
 // UPDATE TOTAL FIELD
 function updateTotal() {

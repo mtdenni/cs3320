@@ -1,22 +1,21 @@
 {
-  "name": "project4",
+  "name": "project4-matt-save",
   "version": "0.0.0",
   "private": true,
-  "main": "app.js",
   "scripts": {
-    "start": "node bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "connect-sqlite3": "^0.9.11",
     "cookie-parser": "~1.4.4",
+    "cookie-session": "^1.3.3",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-session": "^1.17.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11",
     "sqlite3": "^4.1.0"
-  },
-  "devDependencies": {
-    "open-cli": "^5.0.0"
   }
 }

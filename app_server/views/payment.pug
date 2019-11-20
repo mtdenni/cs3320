@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  main
+    .container
+      // MAIN CONTENT HERE
+      .row.justify-content-center
+        .col-md-4.border.p-2
+          h4 Payment:
+          form(action='thankyou.html')
+            select#paymentFormType.browser-default.custom-select.mb-4
+              option(value='null' selected='' disabled='') Select Card Type
+              option(value='VISA') VISA
+              option(value='MasterCard') MasterCard
+              option(value='Discovery') Discovery
+              option(value='AmericanExpress') American Express
+            .row
+              .col
+                input#paymentFormNumber.form-control.mb-4(type='text' placeholder='Enter Card Number' minlength='16' maxlength='16' size='16' inputmode='numeric' required='')
+              .col
+                input#paymentFormExpiration.form-control.mb-4(type='text' placeholder='Expiration Date' maxlength='6' size='7' inputmode='numeric' required='')
+              button.btn.btn-info.mx-4.btn-block(type='submit')
+                | Make Payment
+        .col-md-7.ml-1.border
+          .table-responsive.text-nowrap
+            table.table
+              thead
+                tr
+                  th(scope='col') #
+                  th(scope='col') Item
+                  th(scope='col') Price Per Unit
+                  th(scope='col') Quantity
+              tbody
+                tr
+                  th(scope='row') 1
+                  td TBD
+                  td TBD
+                  td TBD
+                tr
+                  th(scope='row') 2
+                  td TBD
+                  td TBD
+                  td TBD
+            p
+              b Total:
+              span.totalField TBD

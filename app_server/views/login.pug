@@ -1,16 +1,17 @@
 extends layout
 
 block content
+  main
   .container
     .row
       .col-md-12
         // Default form login
-        form.text-center.border.border-light.p-5(action='#!')
+        form.text-center.border.border-light.p-5(action='#' method="POST")
           p.h4.mb-4 Sign in
           // Email
-          input#defaultLoginFormEmail.form-control.mb-4(type='email' placeholder='E-mail')
+          input#defaultLoginFormEmail.form-control.mb-4(type='email' placeholder='E-mail' name='userName')
           // Password
-          input#defaultLoginFormPassword.form-control.mb-4(type='password' placeholder='Password')
+          input#defaultLoginFormPassword.form-control.mb-4(type='password' placeholder='Password' name='password')
           .d-flex.justify-content-around
             div
               // Remember me
@@ -26,7 +27,7 @@ block content
           // Register
           p
             | Not a member?
-            a(href='register') 
+            a(href='register.html') 
               | Register
           // Social login
           p or sign in with:

@@ -4,73 +4,24 @@ block content
   .container
     .row
       .col-md-12
-        form.text-center.border.border-light.p-5(action='#!')
+        form.text-center.border.border-light.p-5(action='#' method="POST")
           p.h4.mb-4 Sign up
           .form-row.mb-4
             .col
-              input#registerFormFirstName.form-control(type='text' placeholder='First name' maxlength='100' required='')
+              input#registerFormFirstName.form-control(type='text' placeholder='First name' maxlength='100' required='' name='firstName')
             .col
-              input#defaultRegisterFormLastName.form-control(type='text' placeholder='Last name' maxlength='100' required='')
-          input#registerFormAddress1.form-control.mb-4(type='text' placeholder='Address 1' maxlength='100' required='')
-          input#registerFormAddress2.form-control.mb-4(type='text' placeholder='Address 2' maxlength='100')
-          input#registerFormCity.form-control.mb-4(type='text' placeholder='City' maxlength='100' required='')
-          select#registerFormState.browser-default.custom-select.mb-4
+              input#defaultRegisterFormLastName.form-control(type='text' placeholder='Last name' maxlength='100' required='' name='lastName')
+          input#registerFormAddress1.form-control.mb-4(type='text' placeholder='Address 1' maxlength='100' required='' name='address1')
+          input#registerFormAddress2.form-control.mb-4(type='text' placeholder='Address 2' maxlength='100' name='address2')
+          input#registerFormCity.form-control.mb-4(type='text' placeholder='City' maxlength='100' required='' name='city')
+          select#registerFormState.browser-default.custom-select.mb-4(name='state')
             option(value='' disabled='' selected='') State
-            option(value='AL') Alabama
-            option(value='AK') Alaska
-            option(value='AZ') Arizona
-            option(value='AR') Arkansas
-            option(value='CA') California
-            option(value='CO') Colorado
-            option(value='CT') Connecticut
-            option(value='DE') Delaware
-            option(value='DC') District Of Columbia
-            option(value='FL') Florida
-            option(value='GA') Georgia
-            option(value='HI') Hawaii
-            option(value='ID') Idaho
-            option(value='IL') Illinois
-            option(value='IN') Indiana
-            option(value='IA') Iowa
-            option(value='KS') Kansas
-            option(value='KY') Kentucky
-            option(value='LA') Louisiana
-            option(value='ME') Maine
-            option(value='MD') Maryland
-            option(value='MA') Massachusetts
-            option(value='MI') Michigan
-            option(value='MN') Minnesota
-            option(value='MS') Mississippi
-            option(value='MO') Missouri
-            option(value='MT') Montana
-            option(value='NE') Nebraska
-            option(value='NV') Nevada
-            option(value='NH') New Hampshire
-            option(value='NJ') New Jersey
-            option(value='NM') New Mexico
-            option(value='NY') New York
-            option(value='NC') North Carolina
-            option(value='ND') North Dakota
-            option(value='OH') Ohio
-            option(value='OK') Oklahoma
-            option(value='OR') Oregon
-            option(value='PA') Pennsylvania
-            option(value='RI') Rhode Island
-            option(value='SC') South Carolina
-            option(value='SD') South Dakota
-            option(value='TN') Tennessee
-            option(value='TX') Texas
-            option(value='UT') Utah
-            option(value='VT') Vermont
-            option(value='VA') Virginia
-            option(value='WA') Washington
-            option(value='WV') West Virginia
-            option(value='WI') Wisconsin
-            option(value='WY') Wyoming
-          input#registerFormZip.form-control.mb-4(type='text' placeholder='Zip' minlength='5' max='9' required='')
-          input#registerFormEmail.form-control.mb-4(type='email' placeholder='E-mail' maxlength='100' required='')
-          input#registerPhonePassword.form-control.mb-4(type='text' placeholder='Phone number' aria-describedby='defaultRegisterFormPhoneHelpBlock')
-          input#registerFormPassword.form-control.mb-4(type='password' placeholder='Password' aria-describedby='defaultRegisterFormPasswordHelpBlock')
+            each state in states
+              option(value=`${state.state_abbr}`)=state.state_name
+          input#registerFormZip.form-control.mb-4(type='text' placeholder='Zip' minlength='5' max='9' required='' name='zipCode')
+          input#registerFormEmail.form-control.mb-4(type='email' placeholder='E-mail' maxlength='100' required='' name='email')
+          input#registerPhonePassword.form-control.mb-4(type='text' placeholder='Phone number' aria-describedby='defaultRegisterFormPhoneHelpBlock' name='phone')
+          input#registerFormPassword.form-control.mb-4(type='password' placeholder='Password' aria-describedby='defaultRegisterFormPasswordHelpBlock' name='password')
           input#registerFormPasswordVerify.form-control.mb-4(type='password' placeholder='Verify Password' aria-describedby='defaultRegisterFormPasswordHelpBlock')
           button.btn.btn-info.my-4.btn-block(type='submit')
             | Sign in
