@@ -5,7 +5,7 @@ const loginController = (req, res) => {
     res.render('login', {});
   };
   
-  const logoutController = (req, res) => {
+const logoutController = (req, res) => {
     // Remove session information
     if (req.session) {
       // Delete session object
@@ -18,17 +18,17 @@ const loginController = (req, res) => {
         }
       });
     }
-  };
+};
 
-  const processLogin = (req, res) => {
-    let sql = `SELECT * FROM UserCredentials WHERE userName = '${req.body.userName}'`;
+const processLogin = (req, res) => {
+    let sql = `SELECT * FROM UserCredentials WHERE userName = '${req.body.userName}' AND pass = '${req.body.password}'`;
     db.all(sql, [], (err, user) => {
       if(err) {
         console.log('Error: ' + err);
       }
       if(user.length == 0) {
         res.render('login', { 
-            error: 'User or password is incorrect'
+            error: 'Username or password is incorrect'
         })
       } else { 
         req.session.userName = user[0].userName;
@@ -37,10 +37,9 @@ const loginController = (req, res) => {
         return res.redirect('/');
       }
     });
-    // res.render('login', {});
-  };
+};
 
-  const registerController = (req, res) => {
+const registerController = (req, res) => {
     let sql = 'SELECT * FROM state';
     db.all(sql, [], (err, states) => {
       if (err) throw err;
@@ -49,17 +48,18 @@ const loginController = (req, res) => {
       };
       res.render('register', data);
     });
-  };
+};
 
-  const processRegistration = (req, res) => {
+const processRegistration = (req, res) => {
     let sql = `INSERT INTO UserCredentials (userName, pass) VALUES ('${req.body.email}', '${req.body.password}')`;
     db.all(sql, [], (err, data) => {
         if(err) {
             console.log(err);
         }
+        // Query for the newly created user to get the userId
         sql = `SELECT * FROM UserCredentials WHERE userName = '${req.body.email}'`;
         db.all(sql, [], (err, user) => {
-            console.log(user);
+            // Use the new userID and submitted form to populate UserInformation and ShippingInformation
             db.run(`INSERT INTO UserInformation (userId, fullname, address1, address2, city, state, zip)
                 VALUES (
                     ${user[0].userId}, 
@@ -82,13 +82,41 @@ const loginController = (req, res) => {
             res.redirect('/login');
         });
     });
+};
 
-  };
+const accountController = (req, res) => {
+    let sql = `SELECT * FROM OrderItems INNER JOIN Products ON OrderItems.productId = Products.productId INNER JOIN Orders ON OrderItems.orderNumber = Orders.OrderNumber WHERE Orders.userId = ${req.session.userId} ORDER BY Orders.orderNumber DESC`;
+    db.all(sql, [], (err, accountInformation) => {
+    
+        let orderData = [];
+        let orderNumber = 0; 
+        let length = 0;
 
-  module.exports = {
+        accountInformation.forEach(order => {
+            if (orderNumber != order.orderNumber) {
+                orderNumber = order.orderNumber;
+                orderData.push(order);
+                length = orderData.length;
+                orderData[length - 1].orderItems = [];
+                orderData[length - 1].orderItems.push(order);
+            } else {
+                orderData[length -1].orderItems.push(order);
+            }
+        });
+    
+    const data = {
+        orders: orderData
+    }
+
+    res.render('account', data);
+    });
+};
+
+module.exports = {
       loginController,
       logoutController,
       processLogin,
       registerController,
       processRegistration,
+      accountController
   };

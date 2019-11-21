@@ -61,34 +61,6 @@ const storeController = (req, res) => {
   });
 };
 
-const accountController = (req, res) => {
-  let sql = `SELECT * FROM OrderItems INNER JOIN Products ON OrderItems.productId = Products.productId INNER JOIN Orders ON OrderItems.orderNumber = Orders.OrderNumber WHERE Orders.userId = ${req.session.userId};`;
-  db.all(sql, [], (err, accountInformation) => {
-    
-    let orderData = [];
-    let orderNumber = 0; 
-    let length = 0;
-
-    accountInformation.forEach(order => {
-      if (orderNumber != order.orderNumber) {
-        orderNumber = order.orderNumber;
-        orderData.push(order);
-        length = orderData.length;
-        orderData[length - 1].orderItems = [];
-        orderData[length - 1].orderItems.push(order);
-      } else {
-        orderData[length -1].orderItems.push(order);
-      }
-    });
-    
-    const data = {
-      orders: orderData
-    }
-    console.log(data);
-    res.render('account', data);
-  });
-};
-
 const cartController = (req, res) => {
   const reducer = (accumulator, currentItem) => accumulator + currentItem.price * currentItem.quantity;
   const subtotal = req.session.items.reduce(reducer, 0);
@@ -124,7 +96,6 @@ const cartController = (req, res) => {
 };
 
 const processAddToCart = (req, res) => {
-  console.log("POST: " + req.body.item);
   let sql = 'SELECT * FROM Products';
   db.all(sql, [], (err, products) => {
     if (err) throw err;
@@ -227,7 +198,6 @@ module.exports = {
   aboutController,
   shippingController,
   storeController,
-  accountController,
   cartController,
   processAddToCart,
   deleteItem,

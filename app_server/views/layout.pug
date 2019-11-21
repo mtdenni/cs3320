@@ -31,9 +31,9 @@ html
                 if (locals.userName == undefined)
                   a.dropdown-item(href='/login') Login
                   a.dropdown-item(href='/register') Register
-                a.dropdown-item(href='/account') Account
-                a.dropdown-item(href='/shipping') Shipping Information
                 if (locals.userName != undefined)
+                  a.dropdown-item(href='/account') Account
+                  a.dropdown-item(href='/shipping') Shipping Information
                   a.dropdown-item(href='/logout') Logout
     if (error)
       .alert.alert-warning.alert-dismissible.fade.show(role="alert")

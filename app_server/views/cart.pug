@@ -6,7 +6,7 @@ block content
       form(action='#' method='POST')
         // MAIN CONTENT HERE
         .row.justify-content-center
-          .col.ml-1.border.mb-3.pt-2
+          .col.ml-1.border.mb-3.py-2
             h5 Select Payment
             select#paymentFormType.browser-default.custom-select.mb-4(name='paymentId')
               if (paymentInformation)
@@ -16,7 +16,7 @@ block content
                 option(value='null' selected='' disabled='') No Saved Payments
             a(href='/paymentMethod') Add Payment Method
         .row.justify-content-center
-          .col.ml-1.border.mb-3.pt-2
+          .col.ml-1.border.mb-3.py-2
             h5 Select Shipping Address
             select#paymentFormType.browser-default.custom-select.mb-4(name='shippingId')
               if (shipmentInformation)
